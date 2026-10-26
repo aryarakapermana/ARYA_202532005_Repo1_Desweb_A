@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lapor Temuan - Mangrove Birdwatch Jakarta</title>
+</head>
+<body>
+  <header>
+    <h1>Lapor Temuan Burung</h1>
+    <nav aria-label="Navigasi utama">
+      <ul>
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="spesies.html">Daftar Spesies</a></li>
+        <li><a href="panduan.html">Panduan Pengamatan</a></li>
+        <li><a href="lapor.html">Lapor Temuan</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h2>Formulir Pengamatan</h2>
+      <p>Isi data berikut. Kolom bertanda <strong>wajib</strong> harus diisi.</p>
+
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Data Pengamat</legend>
+          <p>
+            <label for="nama">Nama lengkap (wajib)</label><br>
+            <input type="text" id="nama" name="nama" required minlength="3" placeholder="Contoh: Budi Santoso">
+          </p>
+          <p>
+            <label for="email">Email (wajib)</label><br>
+            <input type="email" id="email" name="email" required placeholder="nama@contoh.com">
+          </p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Data Pengamatan</legend>
+          <p>
+            <label for="tanggal">Tanggal pengamatan (wajib)</label><br>
+            <input type="date" id="tanggal" name="tanggal" required>
+          </p>
+          <p>
+            <label for="spesies">Jenis burung (wajib)</label><br>
+            <select id="spesies" name="spesies" required>
+              <option value="">-- Pilih jenis --</option>
+              <option value="kuntul-kecil">Kuntul kecil</option>
+              <option value="cangak-abu">Cangak abu</option>
+              <option value="blekok-sawah">Blekok sawah</option>
+              <option value="kowak-malam">Kowak-malam kelabu</option>
+              <option value="cekakak-sungai">Cekakak sungai</option>
+              <option value="pecuk-ular">Pecuk-ular asia</option>
+            </select>
+          </p>
+          <p>
+            <label for="jumlah">Jumlah individu (1-100)</label><br>
+            <input type="number" id="jumlah" name="jumlah" min="1" max="100" value="1" required>
+          </p>
+          <p>Waktu pengamatan (wajib):</p>
+          <p>
+            <input type="radio" id="waktu-pagi" name="waktu" value="pagi" required>
+            <label for="waktu-pagi">Pagi</label>
+            <input type="radio" id="waktu-siang" name="waktu" value="siang">
+            <label for="waktu-siang">Siang</label>
+            <input type="radio" id="waktu-sore" name="waktu" value="sore">
+            <label for="waktu-sore">Sore</label>
+          </p>
+          <p>Perilaku yang terlihat:</p>
+          <p>
+            <input type="checkbox" id="cari-makan" name="perilaku" value="cari-makan">
+            <label for="cari-makan">Mencari makan</label>
+            <input type="checkbox" id="terbang" name="perilaku" value="terbang">
+            <label for="terbang">Terbang</label>
+            <input type="checkbox" id="bersarang" name="perilaku" value="bersarang">
+            <label for="bersarang">Bersarang</label>
+          </p>
+          <p>
+            <label for="catatan">Catatan tambahan</label><br>
+            <textarea id="catatan" name="catatan" rows="4" cols="40" maxlength="300"></textarea>
+          </p>
+        </fieldset>
+
+        <p>
+          <input type="checkbox" id="setuju" name="setuju" required>
+          <label for="setuju">Saya menyatakan data ini sesuai pengamatan saya (wajib)</label>
+        </p>
+        <p>
+          <button type="submit">Kirim Laporan</button>
+          <button type="reset">Reset</button>
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Mangrove Birdwatch Jakarta. Arya Raka Permana (202532005).</p>
+    <p><a href="index.html">Kembali ke Beranda</a></p>
+  </footer>
+</body>
+</html>
